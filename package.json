@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "author": "JetTsang",
   "license": "ISC",
