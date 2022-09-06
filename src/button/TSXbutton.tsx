@@ -2,7 +2,7 @@ import { defineComponent} from "vue";
 
 export default defineComponent({
 
-  name: "JSXButton",
+  name: "TSXbutton",
   render() {
     return <button>JSX Button</button>;
   },
