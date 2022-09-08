@@ -1,7 +1,7 @@
 <template>
 <SButton/>
 <SFCbutton/>
-<TSXbutton/>
+<TSXbutton color="purple">Unocss按钮</TSXbutton>
 </template>
 
 <script lang="ts">
