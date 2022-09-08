@@ -12,8 +12,18 @@ const colors = [
     "purple",
     "pink",
   ];
+const iconify = [
+    "search",
+    "edit",
+    "check",
+    "message",
+    "star-off",
+    "delete",
+    "add",
+    "share",
+]
   const safelist = [
-
+    ...iconify.map((v)=> `i-ic-baseline-${v}`),
     ...colors.map((v) => `bg-${v}-500`),
     ...colors.map((v) => `hover:bg-${v}-700`),
   ];
