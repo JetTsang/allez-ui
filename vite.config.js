@@ -2,8 +2,7 @@ import {defineConfig} from 'vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vue from '@vitejs/plugin-vue'
 
-import { presetUno, presetAttributify, presetIcons } from "unocss";
-import Unocss from "unocss/vite";
+import Unocss from './src/config/unocss'
 
 // rollup配置项
 const rollupOptions = {
@@ -22,9 +21,7 @@ export default defineConfig({
             // options are passed on to @vue/babel-plugin-jsx
         }),
         // 添加UnoCSS插件
-        Unocss({
-            presets: [presetUno(), presetAttributify(), presetIcons()],
-        })
+        Unocss()
     ],
     build:{
         rollupOptions,
