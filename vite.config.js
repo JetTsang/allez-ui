@@ -32,6 +32,7 @@ export default defineConfig({
             fileName: "allez-ui",
             // 导出模块格式
             formats: ["esm", "umd","iife"],
-        }
+        },
+        cssCodeSplit:true // 分离Css样式以便支持UnoCss
     }
 })
