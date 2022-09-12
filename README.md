@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-基于 Vite 的组件库开发实践，包含项目启动，组件文档，代码规范，单元测试和自动部署等内容。
+基于 Vue3 和 Vite 生态打造，助力于快速构建web应用程序。
 </p>
 
 <p align="center">
@@ -40,13 +40,18 @@ createApp(App).use(AllezUi).mount('#app');
 ```vue
 <template>
   <div>
-    <JSXButton color="red">测试按钮</JSXButton>
+    <Button color="red">测试按钮</Button>
   </div>
 </template>
 ```
 
 ## 参考链接
-- [基于 Vite 的组件库工程化实战 - 掘金小册](https://juejin.cn/book/7117582869358182403)
 - [Vite官网](https://vitejs.dev/)
 - [Vitepress官网](https://vitepress.vuejs.org)
 - [Vue官网](https://vuejs.org/)
+
+## TODO
+
+- [ ] Vercel部署
+- [x] 实现按需引入
+- [x] Monorepo管理仓库
