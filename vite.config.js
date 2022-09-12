@@ -34,5 +34,16 @@ export default defineConfig({
             formats: ["esm", "umd","iife"],
         },
         cssCodeSplit:true // 分离Css样式以便支持UnoCss
-    }
+    },
+    test: {
+        // enable jest-like global test APIs
+        globals: true,
+        // simulate DOM with happy-dom
+        // (requires installing happy-dom as a peer dependency)
+        environment: 'happy-dom',
+        // 支持tsx组件
+        transformMode: {
+          web: [/.[tj]sx$/]
+        }
+      }
 })
