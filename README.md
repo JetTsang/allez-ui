@@ -11,7 +11,7 @@
 <p align="center">
   <img src="https://img.shields.io/npm/l/booker-ui" />
   <img src="https://img.shields.io/bundlephobia/min/booker-ui" />
-  <img src="https://img.shields.io/github/workflow/status/juetan/vite-ui-practice/CI?label=test" />
+  <img src="https://img.shields.io/github/workflow/status/JetTsang/allez-ui/CI?label=test" />
   <img src="https://img.shields.io/github/workflow/status/juetan/vite-ui-practice/Publish%20Booker-UI%20To%20Npm" />
   <img src="https://img.shields.io/npm/v/booker-ui" />
 </p>
