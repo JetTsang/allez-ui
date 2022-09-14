@@ -27,12 +27,12 @@
 ## 快速开始
 1. 安装依赖
 ```
-pnpm install allez-ui -D
+pnpm install allezd -D
 ```
 2. 引入依赖
 ```ts
-import AllezUi from 'allez-ui';
-import 'allez-ui/dist/assets/entry.css'
+import AllezUi from 'allezd';
+import 'allezd/dist/assets/entry.css'
 
 createApp(App).use(AllezUi).mount('#app');
 ```
