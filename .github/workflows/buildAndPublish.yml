@@ -1,34 +1,36 @@
-name: build-and-publish
-on:
+name: build-and-publish # 工作流的名字
+on:   # 事件触发
   release:
     types: [created]
   pull_request:
     branches:
-      - master
+      - publish_npm
   push:
     branches:
-      - master
+      - publish_npm
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+jobs:  # 工作 ，并行或串行
+  build:  # 工作1 名称是：build
+    runs-on: ubuntu-latest # runner的环境，代表该工作的所依赖的环境
+    steps:  # 该工作的步骤
+      - uses: actions/checkout@v3 # 复用的action 从代码库中检出代码到runner
+        name: "从Github拉取代码"
+      - uses: actions/setup-node@v3 # 设置nodeb版本
+        name: "设置Node版本"
         with:
           node-version: 16
-      - run: npm install
+      - run: npm install # 跑一些命令
       - run: npm run build
 
   publish-npm:
-    needs: build
+    needs: build  # 需要依赖前一个工作的完成，因此这里是串行
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://registry.npmjs.org
+          registry-url: https://registry.npmjs.org # 设置npm的仓库地址
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
