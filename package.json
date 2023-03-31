@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "使用vite+vue3+vitest+unocss",
   "main": "index.js",
+  "homepage": "https://allez-ui.vercel.app",
   "scripts": {
     "test": "vitest",
     "test:run": "vitest run",
