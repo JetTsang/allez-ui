@@ -1,6 +1,8 @@
 name: Publish To Npm
 
 on: 
+  push:
+    branches: [ publish_npm ]
   pull_request:
     branches: [ publish_npm ]
 
